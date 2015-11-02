@@ -1,0 +1,74 @@
+<?php
+
+namespace Pixell\NewsletterBundle\Listener;
+
+use Doctrine\ORM\Event\OnFlushEventArgs;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+use Pixell\NewsletterBundle\Entity\NewsletterEntity;
+use Pixell\NewsletterBundle\Listener\VoxmailWrapper;
+
+use xmlrpcmsg;
+
+class NewsletterListener
+{
+    protected $container;
+    protected $config;
+
+    public function __construct(ContainerInterface $container, array $config)
+    {
+        $this->config = $config;
+        $this->container = $container;
+    }
+    
+    public function onFlush(OnFlushEventArgs $args)
+    {
+        /* @var $em \Doctrine\ORM\EntityManager */
+        $em = $args->getEntityManager();
+        /* @var $uow \Doctrine\ORM\UnitOfWork */
+        $uow = $em->getUnitOfWork();
+
+        foreach ($uow->getScheduledEntityInsertions() as $entity) {
+            if ($entity instanceof NewsletterEntity) {
+                $this->createUserService($entity);
+            }
+        }
+
+        foreach ($uow->getScheduledEntityDeletions() as $entity) {
+            if ($entity instanceof NewsletterEntity) {
+                $this->deleteUserService($entity);
+            }
+        }
+    }
+    
+    private function createUserService($entity)
+    {
+        $wrapper= new VoxmailWrapper();
+        
+        $wrapper->voxmail_init(
+                $this->config['host'],
+                $this->config['api_key'],
+                $this->config['secret']
+            );
+        
+        $wrapper->voxmail_user_create(array(
+                'mail' => $entity->getEmail(),
+                'profile_name' => $entity->getName(),
+                'profile_surname' => $entity->getSurname(),
+            ));
+    }
+    
+    private function deleteUserService($entity)
+    {
+        $wrapper= new VoxmailWrapper();
+        
+        $wrapper->voxmail_init(
+                $this->config['host'],
+                $this->config['api_key'],
+                $this->config['secret']
+            );
+        
+        $wrapper->voxmail_user_erase($entity->getEmail());
+    }
+    
+}

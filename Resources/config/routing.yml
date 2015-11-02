@@ -1,0 +1,7 @@
+newsletter:
+    resource: "@PixellPageBundle/Controller/NewsletterEntityController.php"
+    type:     annotation
+    
+public:
+    resource: "@PixellPageBundle/Controller/PublicController.php"
+    type:     annotation

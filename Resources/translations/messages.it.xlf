@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="it" target-language="it" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="b068931cc450442b63f5b3d276ea4297" resname="name">
+        <source>name</source>
+        <target>nome</target>
+      </trans-unit>
+      <trans-unit id="e8911889a7780cdaf79c3d6ae86834b2" resname="surname">
+        <source>surname</source>
+        <target>cognome</target>
+      </trans-unit>
+      <trans-unit id="0c83f57c786a0b4a39efab23731c7ebc" resname="email">
+        <source>email</source>
+        <target>email</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

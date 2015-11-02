@@ -1,0 +1,81 @@
+<?php
+
+namespace Pixell\NewsletterBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Table(name="newsletter_entity")
+ * @ORM\Entity
+ */
+class NewsletterEntity
+{
+    protected static $entityName = 'Newsletter';
+
+    protected static $entityIcon = 'file-o';
+    
+    public static function getEntityName() {
+        return self::$entityName;
+    }
+
+    public static function getEntityIcon() {
+        return self::$entityIcon;
+    }
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(type="smallint", options={"unsigned": true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $createdBy
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\Column(type="string")
+     */
+    protected $createdBy;
+
+    /**
+     * @var string $updatedBy
+     *
+     * @Gedmo\Blameable(on="update")
+     * @ORM\Column(type="string")
+     */
+    protected $updatedBy;
+
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(name="created", type="datetime")
+     */
+    protected $created;
+
+    /**
+     * @ORM\Column(name="updated", type="datetime")
+     * @Gedmo\Timestampable(on="update")
+     */
+    protected $updated;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
+     */
+    protected $surname;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
+     */
+    protected $email;
+}

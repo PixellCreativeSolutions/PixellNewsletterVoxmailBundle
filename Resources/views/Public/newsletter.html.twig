@@ -1,0 +1,22 @@
+<div class="newsletter-cont">
+    <div class="row nom">
+         {%- for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="alert alert-success">
+                {{ flashMessage }}
+            </div>
+        {%- endfor %}
+
+        {%- for flashMessage in app.session.flashbag.get('alert') %}
+            <div class="alert alert-danger">
+                {{ flashMessage }}
+            </div>
+        {%- endfor %}
+        
+        {{ form_start(form) }}
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.name) }}
+            {{ form_widget(form.surname) }}
+            {{ form_widget(form.email) }}
+        {{ form_end(form) }}
+    </div>
+</div>
