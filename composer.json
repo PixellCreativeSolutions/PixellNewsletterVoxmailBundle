@@ -24,7 +24,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Pixell\\NewsletterBundle\\Voxmail\\": "" }
+        "psr-4": { "Pixell\\NewsletterBundle\\": "" }
     },
     "extra": {
         "branch-alias": {
