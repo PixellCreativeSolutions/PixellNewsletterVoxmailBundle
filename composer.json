@@ -1,5 +1,5 @@
 {
-    "name": "Pixell/newsletter-voxmail-bundle",
+    "name": "pixell/newsletter-voxmail-bundle",
     "type": "symfony-bundle",
     "description": "Simple bundle for Newsletter registration",
     "keywords": ["Voxmail", "newsletter"],
@@ -7,8 +7,8 @@
     "license": "LGPL-3.0",
     "authors": [
         {
-            "name": "Antonino Carella",
-            "email": "antonio.carella@gmail.com"
+            "name": "Pixell srl",
+            "email": "info@pixell.it"
         }
     ],
     "require": {
