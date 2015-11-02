@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Listener;
+namespace PixellHub\NewsletterBundle\Listener;
 
 use xmlrpc_client;
 use xmlrpcmsg;

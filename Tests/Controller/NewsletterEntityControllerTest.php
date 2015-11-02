@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Tests\Controller;
+namespace PixellHub\NewsletterBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

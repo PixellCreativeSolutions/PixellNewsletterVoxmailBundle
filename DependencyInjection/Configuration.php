@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixell\NewsletterBundle\DependencyInjection;
+namespace PixellHub\NewsletterBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

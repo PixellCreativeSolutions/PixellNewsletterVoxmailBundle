@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Form;
+namespace PixellHub\NewsletterBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -71,7 +71,7 @@ class NewsletterEntityType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Pixell\NewsletterBundle\Entity\NewsletterEntity'
+            'data_class' => 'PixellHub\NewsletterBundle\Entity\NewsletterEntity'
         ));
     }
 

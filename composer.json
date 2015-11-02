@@ -24,7 +24,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Pixell\\NewsletterBundle\\": "" }
+        "psr-4": { "PixellHub\\NewsletterBundle\\": "" }
     },
     "extra": {
         "branch-alias": {

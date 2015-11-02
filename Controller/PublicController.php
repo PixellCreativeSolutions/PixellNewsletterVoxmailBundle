@@ -1,13 +1,13 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Controller;
+namespace PixellHub\NewsletterBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Pixell\NewsletterBundle\Entity\NewsletterEntity;
-use Pixell\NewsletterBundle\Form\NewsletterEntityType;
+use PixellHub\NewsletterBundle\Entity\NewsletterEntity;
+use PixellHub\NewsletterBundle\Form\NewsletterEntityType;
 
 /**
  * @Route("/newsletter", defaults={"_locale"="it"}, requirements={"_locale" = "it|en"})

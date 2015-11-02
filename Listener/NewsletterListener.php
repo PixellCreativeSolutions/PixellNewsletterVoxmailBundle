@@ -1,12 +1,12 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Listener;
+namespace PixellHub\NewsletterBundle\Listener;
 
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-use Pixell\NewsletterBundle\Entity\NewsletterEntity;
-use Pixell\NewsletterBundle\Listener\VoxmailWrapper;
+use PixellHub\NewsletterBundle\Entity\NewsletterEntity;
+use PixellHub\NewsletterBundle\Listener\VoxmailWrapper;
 
 use xmlrpcmsg;
 

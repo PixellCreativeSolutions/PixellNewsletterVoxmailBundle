@@ -1,14 +1,14 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Controller;
+namespace PixellHub\NewsletterBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Pixell\NewsletterBundle\Entity\NewsletterEntity;
-use Pixell\NewsletterBundle\Form\NewsletterEntityType;
+use PixellHub\NewsletterBundle\Entity\NewsletterEntity;
+use PixellHub\NewsletterBundle\Form\NewsletterEntityType;
 
 /**
  * NewsletterEntity controller.
@@ -29,7 +29,7 @@ class NewsletterEntityController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 
-		$entitiesRepo = $em->getRepository('PixellNewsletterBundle:NewsletterEntity');
+		$entitiesRepo = $em->getRepository('PixellHubNewsletterBundle:NewsletterEntity');
 		
 		$entitiesQuery = $entitiesRepo->createQueryBuilder('n')->getQuery();
 		
@@ -48,7 +48,7 @@ class NewsletterEntityController extends Controller
 	 *
 	 * @Route("/", name="newsletterentity_create")
 	 * @Method("POST")
-	 * @Template("PixellNewsletterBundle:NewsletterEntity:new.html.twig")
+	 * @Template("PixellHubNewsletterBundle:NewsletterEntity:new.html.twig")
 	 */
 	public function createAction(Request $request)
 	{
@@ -120,7 +120,7 @@ class NewsletterEntityController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 
-		$entity = $em->getRepository('PixellNewsletterBundle:NewsletterEntity')->find($id);
+		$entity = $em->getRepository('PixellHubNewsletterBundle:NewsletterEntity')->find($id);
 
 		if (!$entity) {
 			throw $this->createNotFoundException('Unable to find NewsletterEntity entity.');
@@ -145,7 +145,7 @@ class NewsletterEntityController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 
-		$entity = $em->getRepository('PixellNewsletterBundle:NewsletterEntity')->find($id);
+		$entity = $em->getRepository('PixellHubNewsletterBundle:NewsletterEntity')->find($id);
 
 		if (!$entity) {
 			throw $this->createNotFoundException('Unable to find NewsletterEntity entity.');
@@ -186,13 +186,13 @@ class NewsletterEntityController extends Controller
 	 *
 	 * @Route("/{id}", name="newsletterentity_update")
 	 * @Method("PUT")
-	 * @Template("PixellNewsletterBundle:NewsletterEntity:edit.html.twig")
+	 * @Template("PixellHubNewsletterBundle:NewsletterEntity:edit.html.twig")
 	 */
 	public function updateAction(Request $request, $id)
 	{
 		$em = $this->getDoctrine()->getManager();
 
-		$entity = $em->getRepository('PixellNewsletterBundle:NewsletterEntity')->find($id);
+		$entity = $em->getRepository('PixellHubNewsletterBundle:NewsletterEntity')->find($id);
 
 		if (!$entity) {
 			throw $this->createNotFoundException('Unable to find NewsletterEntity entity.');
@@ -237,7 +237,7 @@ class NewsletterEntityController extends Controller
 
 		if ($form->isValid()) {
 			$em = $this->getDoctrine()->getManager();
-			$entity = $em->getRepository('PixellNewsletterBundle:NewsletterEntity')->find($id);
+			$entity = $em->getRepository('PixellHubNewsletterBundle:NewsletterEntity')->find($id);
 
 			if (!$entity) {
 				throw $this->createNotFoundException('Unable to find NewsletterEntity entity.');

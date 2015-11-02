@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixell\NewsletterBundle\Entity;
+namespace PixellHub\NewsletterBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
