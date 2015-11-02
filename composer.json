@@ -1,5 +1,5 @@
 {
-    "name": "pixell/newsletter-voxmail-bundle",
+    "name": "pixellhub/newsletter-voxmail-bundle",
     "type": "symfony-bundle",
     "description": "Simple bundle for Newsletter registration",
     "keywords": ["Voxmail", "newsletter"],
