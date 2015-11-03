@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class PixellNewsletterExtension extends Extension
+class PixellHubNewsletterExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -21,8 +21,6 @@ class PixellNewsletterExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-        $container->setParameter('pixellhub_newsletter.service_class', $config['service_class']);
-        unset($config['service_class']);
         $container->setParameter('pixellhub_newsletter.config', $config);
         
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
