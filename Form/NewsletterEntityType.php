@@ -80,6 +80,6 @@ class NewsletterEntityType extends AbstractType
      */
     public function getName()
     {
-        return 'pixell_newsletterbundle_newsletterentity';
+        return 'pixellhub_newsletterbundle_newsletterentity';
     }
 }

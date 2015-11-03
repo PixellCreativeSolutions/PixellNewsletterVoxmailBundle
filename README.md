@@ -40,7 +40,7 @@ Then, enable the routing adding:
 ```yaml
 # app/config/routing.yml
 
-pixell_newsletter:
+pixellhub_newsletter:
     resource: "@PixellHubNewsletterBundle/Controller/"
     type:     annotation
     prefix:   /
@@ -51,7 +51,7 @@ Now configure your bundle with your voxmail information:
 ```yaml
 # app/config/config.yml
 
-pixell_newsletter:
+pixellhub_newsletter:
     host:       "voxmail_account"
     secret:     "token_key"
     api_key:    "token_key"
