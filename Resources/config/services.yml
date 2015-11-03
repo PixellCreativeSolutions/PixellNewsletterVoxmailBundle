@@ -1,9 +1,4 @@
 services:
-    
-    pixellhub_newsletter.service:
-        class: "%beelab_paypal.service_class%"
-        arguments:[%beelab_paypal.config%]
-    
     newsletter_listener:
         class: PixellHub\NewsletterBundle\Listener\NewsletterListener
         arguments: ['@service_container',%pixellhub_newsletter.config%]
