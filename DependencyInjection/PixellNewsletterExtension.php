@@ -21,7 +21,7 @@ class PixellNewsletterExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);   
-        $container->setParameter('pixell_newsletter.config', $config);     
+        $container->setParameter('pixellhub_newsletter.config', $config);     
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

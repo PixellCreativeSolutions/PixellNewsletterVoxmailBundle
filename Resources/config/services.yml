@@ -2,6 +2,6 @@ services:
     
     newsletter_listener:
         class: PixellHub\NewsletterBundle\Listener\NewsletterListener
-        arguments: ['@service_container',%pixell_newsletter.config%]
+        arguments: ['@service_container',%pixellhub_newsletter.config%]
         tags:
             - { name: doctrine.event_listener, event: onFlush, method: onFlush }

@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('pixell_newsletter');
+        $rootNode = $treeBuilder->root('pixellhub_newsletter');
 
         $rootNode
             ->children()
