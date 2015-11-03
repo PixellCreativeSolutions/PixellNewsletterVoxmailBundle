@@ -4,4 +4,3 @@ services:
         arguments: ['@service_container',%pixellhub_newsletter.config%]
         tags:
             - { name: doctrine.event_listener, event: onFlush, method: onFlush }
-            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

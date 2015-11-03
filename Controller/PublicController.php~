@@ -40,6 +40,11 @@ class PublicController extends Controller
                 'notice',
                 'Modifiche salvate con successo'
             );
+        }else{
+            $this->get('session')->getFlashBag()->add(
+                'alert',
+                'Modifiche non salvate. Controlla gli errori'
+            );
         }
 
         return array(
