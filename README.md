@@ -51,7 +51,7 @@ Now configure your bundle with your voxmail information:
 ```yaml
 # app/config/config.yml
 
-pixellhub_newsletter:
+pixell_hub_newsletter:
     host:       "voxmail_account"
     secret:     "token_key"
     api_key:    "token_key"
