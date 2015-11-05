@@ -24,8 +24,6 @@ class PublicController extends Controller
         $form = $this->createForm(new NewsletterEntityType(), $entity, array(
                 'method' => 'POST',
             ));
-
-	$form->add('submit', 'submit', array('label' => 'Salva'));
         
         $form->handleRequest($request);
 
