@@ -36,7 +36,7 @@ class PublicController extends Controller
             
             $this->get('session')->getFlashBag()->add(
                 'notice',
-                'Modifiche salvate con successo'
+                'Iscrizione avvenuta con successo'
             );
         }
 
