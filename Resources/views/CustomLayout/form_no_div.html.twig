@@ -1,5 +1,5 @@
 {% extends 'form_div_layout.html.twig' %}
 
 {% block text_widget %}
-    <input type="text" {{ block('widget_attributes') }}{% if value is not empty %} value="{{ value }}"{% endif %}>
+    <input type="text" class="form-control" {{ block('widget_attributes') }}{% if value is not empty %} value="{{ value }}"{% endif %}>
 {% endblock %}

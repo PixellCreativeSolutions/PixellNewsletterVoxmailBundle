@@ -9,35 +9,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class NewsletterEntityType extends AbstractType
 {
     /**
-     * @var boolean $is_super_admin
-     */
-    protected $is_super_admin = false;
-    
-    /**
-     * @var array $CKEditorConfig
-     */
-    protected $CKEditorConfig= array(
-            'toolbar' => array(
-                array(
-                    'name'  => 'basicstyles',
-                    'items' => array('Bold', 'Italic', 'Underline', 'TextColor')
-                ),
-                array(
-                    'name'  => 'editorstyles',
-                    'items' => array('Image', 'Table', 'HorizontalRule', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'FontSize', 'BulletedList', 'NumberedList', 'Link', 'Source')
-                )
-            ),
-            'uiColor' => '#ffffff'
-        );
-
-    public function __construct($is_super_admin = false)
-    {
-        if ($is_super_admin) {
-            $this->is_super_admin = $is_super_admin;
-        }
-    }
-
-        /**
      * @param FormBuilderInterface $builder
      * @param array $options
      */
@@ -46,19 +17,16 @@ class NewsletterEntityType extends AbstractType
         $builder
             ->add('name', 'text', array(
                 'attr' => array(
-                    'label' => '',
                     'placeholder' => 'Nome'
                 )
             ))
             ->add('surname', 'text', array(
                 'attr' => array(
-                    'label' => '',
                     'placeholder' => 'Cognome'
                 )
             ))
             ->add('email', 'text', array(
                 'attr' => array(
-                    'label' => '',
                     'placeholder' => 'Email'
                 )
             ))
