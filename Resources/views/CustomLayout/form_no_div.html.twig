@@ -1,0 +1,7 @@
+{% form_theme form 'PixellHub:NewsletterBundle:custom_frontend_form.htm.twig' %}
+
+{% extends 'form_div_layout.html.twig' %}
+
+{% block text_widget %}
+    <input type="text" {{ block('widget_attributes') }}{% if value is not empty %} value="{{ value }}"{% endif %}>
+{% endblock %}
