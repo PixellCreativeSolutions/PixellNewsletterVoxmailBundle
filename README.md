@@ -58,6 +58,12 @@ pixell_hub_newsletter:
 ```
 
 
+to integrate new panel in your layout:
+
+```twig
+    {{ render(controller('PixellHubNewsletterBundle:Public:newsletter', {'request' : app.request})) }}
+```
+
 License
 -------
 
