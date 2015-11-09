@@ -64,6 +64,13 @@ to integrate new panel in your layout:
     {{ render(controller('PixellHubNewsletterBundle:Public:newsletter', {'request' : app.request})) }}
 ```
 
+
+By default this bundle will try to save the "locale" (it - en - fr ...) in the new user account on voxmail, so if you need/want to save this data you have to add that field on account settings in voxmail
+
+```url
+    http://account.voxmail.it/settings/profile
+```
+
 License
 -------
 
